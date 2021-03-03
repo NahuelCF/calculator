@@ -19,6 +19,10 @@ function App() {
     }
   }
 
+  const clearInput = () => {
+    setInput("")
+  }
+
   return (
     <div className="App">
       <div className="calculator-container">
@@ -49,7 +53,7 @@ function App() {
             <Button>-</Button>
           </div>
         </div>
-        <ButtonClear></ButtonClear>
+        <ButtonClear handleclick={clearInput}></ButtonClear>
       </div>
     </div>
   );
