@@ -9,32 +9,42 @@ import { useState } from "react"
 function App() {
   const [input, setInput] = useState("")
 
+  const addInput = (value) => {
+    setInput(input + value)
+  }
+
+  const addZeroToInput = (value) => {
+    if (input !== "") {
+      setInput(input + value)
+    }
+  }
+
   return (
     <div className="App">
       <div className="calculator-container">
         <div className="Buttons-container">
           <Input input={input}></Input>
           <div className="row">
-            <Button>7</Button>
-            <Button>8</Button>
-            <Button>9</Button>
+            <Button handleclick={addInput}>7</Button>
+            <Button handleclick={addInput}>8</Button>
+            <Button handleclick={addInput}>9</Button>
             <Button>/</Button>
           </div>
           <div className="row">
-            <Button>4</Button>
-            <Button>5</Button>
-            <Button>6</Button>
+            <Button handleclick={addInput}>4</Button>
+            <Button handleclick={addInput}>5</Button>
+            <Button handleclick={addInput}>6</Button>
             <Button>*</Button>
           </div>
           <div className="row">
-            <Button>1</Button>
-            <Button>2</Button>
-            <Button>3</Button>
+            <Button handleclick={addInput}>1</Button>
+            <Button handleclick={addInput}>2</Button>
+            <Button handleclick={addInput}>3</Button>
             <Button>+</Button>
           </div>
           <div className="row">
             <Button>.</Button>
-            <Button>0</Button>
+            <Button handleclick={addZeroToInput}>0</Button>
             <Button>=</Button>
             <Button>-</Button>
           </div>
