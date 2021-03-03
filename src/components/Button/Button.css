@@ -1,0 +1,22 @@
+.button {
+  height: 4rem;
+  background-color: #d3d5d8;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: solid 1px black;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #bcbdbf;
+}
+
+.operator {
+  background-color: #f58b1f;
+}
+
+.operator:hover {
+  background-color: #d3781c;
+}
